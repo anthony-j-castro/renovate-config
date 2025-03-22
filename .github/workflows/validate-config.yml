@@ -15,8 +15,7 @@ jobs:
           cache: "npm"
       - name: Validate Renovate configs
         run: |
-          for file in *.json*
-          do
+          for file in $( find ${{ github.workspace }} -type f -name "*.json*" ); do
             echo "Validating $file…"
             RENOVATE_CONFIG_FILE=${file} npx --yes --package renovate -- renovate-config-validator --strict
           done
