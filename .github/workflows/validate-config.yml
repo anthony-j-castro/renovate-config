@@ -1,0 +1,21 @@
+name: Validate Renovate configs
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Validate Renovate configs
+        run: |
+          for file in *.json*
+          do
+            echo "Validating $file…"
+            RENOVATE_CONFIG_FILE=${file} npx --yes --package renovate -- renovate-config-validator --strict
+          done
