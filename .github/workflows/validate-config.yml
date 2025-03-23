@@ -1,0 +1,25 @@
+name: Validate Renovate configs
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Restore cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node
+      - name: Validate Renovate configs
+        run: |
+          for file in $( find ${{ github.workspace }} -type f -name "*.json*" ); do
+            echo "Validating $file…"
+            npx --yes --package renovate -- renovate-config-validator --strict $file
+          done
