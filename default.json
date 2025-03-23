@@ -7,7 +7,7 @@
   "timezone": "America/New_York",
   "packageRules": [
     {
-      "depTypeList": ["devDependencies"],
+      "matchDepTypes": ["devDependencies"],
       "semanticCommitScope": "dev-deps"
     }
   ]
