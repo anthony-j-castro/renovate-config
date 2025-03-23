@@ -1,4 +1,10 @@
 {
   "extends": ["config:recommended"],
-  "timezone": "America/New_York"
+  "timezone": "America/New_York",
+  "packageRules": [
+    {
+      "depTypeList": ["devDependencies"],
+      "semanticCommitScope": "dev-deps"
+    }
+  ]
 }
