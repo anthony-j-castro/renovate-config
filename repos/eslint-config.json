@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "local>anthony-j-castro/renovate-config",
+    ":semanticCommitTypeAll(build)"
+  ]
+}
