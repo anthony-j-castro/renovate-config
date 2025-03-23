@@ -1,4 +1,13 @@
 {
   "extends": ["config:recommended"],
-  "timezone": "America/New_York"
+  "timezone": "America/New_York",
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "@anthony-j-castro/eslint-config",
+        "@anthony-j-castro/prettier-config"
+      ],
+      "rangeStrategy": "update-lockfile"
+    }
+  ]
 }
