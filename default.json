@@ -3,7 +3,7 @@
     "config:recommended",
     ":disableDependencyDashboard",
     ":rebaseStalePrs",
-    ":semanticPrefixChore"
+    ":semanticCommitTypeAll(chore)"
   ],
   "timezone": "America/New_York",
   "packageRules": [
