@@ -3,7 +3,7 @@
   "timezone": "America/New_York",
   "packageRules": [
     {
-      "matchPackageNames": [
+      "matchDepNames": [
         "@anthony-j-castro/eslint-config",
         "@anthony-j-castro/prettier-config"
       ],
