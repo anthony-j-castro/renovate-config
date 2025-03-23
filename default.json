@@ -2,7 +2,8 @@
   "extends": [
     "config:recommended",
     ":disableDependencyDashboard",
-    ":rebaseStalePrs"
+    ":rebaseStalePrs",
+    ":semanticPrefixChore"
   ],
   "timezone": "America/New_York",
   "packageRules": [
