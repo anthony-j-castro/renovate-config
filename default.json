@@ -1,5 +1,9 @@
 {
-  "extends": ["config:recommended"],
+  "extends": [
+    "config:recommended",
+    ":disableDependencyDashboard",
+    ":rebaseStalePrs"
+  ],
   "timezone": "America/New_York",
   "packageRules": [
     {
