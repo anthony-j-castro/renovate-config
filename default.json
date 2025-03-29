@@ -6,6 +6,7 @@
     ":semanticCommitTypeAll(chore)"
   ],
   "timezone": "America/New_York",
+  "lockFileMaintenance": { "enabled": true },
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies", "peerDependencies"],
