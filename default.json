@@ -12,6 +12,11 @@
       "matchDepTypes": ["devDependencies", "peerDependencies"],
       "rangeStrategy": "bump",
       "semanticCommitScope": "dev-deps"
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "rangeStrategy": "bump",
+      "semanticCommitScope": "deps"
     }
   ]
 }
