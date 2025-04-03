@@ -10,11 +10,6 @@
   "lockFileMaintenance": { "enabled": true },
   "packageRules": [
     {
-      "matchDepTypes": ["dependencies"],
-      "rangeStrategy": "bump",
-      "semanticCommitScope": "deps"
-    },
-    {
       "matchDepTypes": ["devDependencies", "peerDependencies"],
       "rangeStrategy": "bump",
       "semanticCommitScope": "dev-deps"
